@@ -1,0 +1,49 @@
+首先讲external_knowledge 中ubuntu 的json 数据补齐
+
+
+
+sh_file 是运行代码所需要的脚本
+**** 
+
+注意将模型路径改为BERT-LARGE
+****
+
+目前取得在我这边取得进展的adaptation 模型获取如下
+
+bash external_REBED_ubuntu.sh  在output 目录下得到训练样本 manual_external_REBED
+bash external_REBED_advisor.sh  在output 目录下得到训练样本 在output 目录下得到训练样本 manual_external_advisor_REBED
+
+adaptation 过程
+其中　manual_external_REBED　　　　　用于ubuntu 数据
+manual_external_advisor_REBED　　 用于advisor 数据
+
+
+REBED_advisor_adapt_external.sh   用于advisor adaptation (这个数据量小非常快, 我这边bert base 只需要两个小时)
+
+
+REBED_ubuntu_adapt_external.sh     用于ubuntu adaptation(数据量比较大 我这里需要两天)
+
+
+
+
+运行完后 adaptation 模型保存在adapted_L-12_H-768_A-12 目录下 直接finetune 即可
+
+
+验证语言模型
+pretrain_eval.sh 用于验证语言模型
+直接修改restore 路径即可
+
+
+
+
+进一步实验
+可以external_REBED_ubuntu.sh 或者 external_REBED_advisor.sh 修改factor 值 多训练几个回合
+可以进行进一步实验　使得实验结果拟合的更好
+*进一步实验中的脚本中记得更改 --sample_num 的值
+我在log 中给了一个Demo.log,  生成训练样例的log 最后一行会有一个总的样本数 也就是新的sample_num的值
+Bert用到了warmup, 所以 sample_num 会直接影响学习率
+
+
+
+
+

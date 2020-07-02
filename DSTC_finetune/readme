@@ -1,0 +1,31 @@
+首先按照目录中的文件将模型补全
+
+
+在 DSTC8_DATA 的task1 task2 子目录中有readme 文件 负责指导文件生成
+
+
+
+运行文件的bash位于sh_file
+**** 更改为BERT-LARGE 路径
+
+num_train_epochs 要和生成的数据对应
+num_train_epochs <= data_preprocess.py 中的 num_train_epochs 否则会找不到文件导致训练中断(默认都是30)
+
+
+run_ubuntu_HAE.sh  用于运行 task1 ubuntu数据 rembed adaptation + rembed finetune (注意是否加载模型成功 如果成功会有加载模型的路径打印)
+
+
+run_advisor_HAE.sh  用于运行 task1 advisor数据 rembed adaptation + rembed finetune (注意是否加载模型成功 如果成功会有加载模型的路径打印)
+
+
+run_task2_REBED_adapt.shv用于运行 task2 ubuntu数据 rembed adaptation + rembed finetune (注意是否加载模型成功 如果成功会有加载模型的路径打印)
+
+
+验证bash
+eval_task1_ubuntu.sh  用于运行 task1 ubuntu数据(注意是否加载模型成功 如果成功会有加载模型的路径打印)
+
+
+eval_task1_advisor.sh  用于运行 task1 advisor数据(注意是否加载模型成功 如果成功会有加载模型的路径打印)
+
+
+eval_task2.sh 用于运行 task2 ubuntu数据 (注意是否加载模型成功 如果成功会有加载模型的路径打印)
