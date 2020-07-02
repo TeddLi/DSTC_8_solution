@@ -21,7 +21,7 @@ Eval scrips eval_task1_advisor.sh, eval_task1_ubuntu.sh, eval_task2.sh
 
 
 ### Cite
-If you use the code and datasets, please cite the following paper:
+If you use the code, please cite the following paper:
 
 @misc{gu2020pretrained,
     title={Pre-Trained and Attention-Based Neural Networks for Building Noetic Task-Oriented Dialogue Systems},
