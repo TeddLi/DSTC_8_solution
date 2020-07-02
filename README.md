@@ -1,5 +1,6 @@
 # DSTC_8_solution
-This is our proposed model for subtask 1 and 2 of Dialog System Technology Challenges 8 (DSTC 8)
+This is our proposed model for subtask 1 and 2 of Dialog System Technology Challenges 8 (DSTC 8).
+Our overall method get 3rd and 4th position of subtask1 and subtask2 according to the evaluation of contest.
 ### Dependencies
 Python 3.6
 Tensorflow 1.4.0
